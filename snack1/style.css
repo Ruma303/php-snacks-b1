@@ -6,14 +6,10 @@
     display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 0 auto; padding: 5rem 1rem;
 }
 
-ul {
-    list-style: none;
+ul, .match {
+    list-style: none; display: flex; flex-direction: column; text-align: center;
 }
 
 .results-div {
     display: flex; margin: 0 auto; padding: 1rem; gap: 2rem;
-}
-
-.home-team, .host-team {
-    display: flex; flex-direction: column;
 }

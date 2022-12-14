@@ -1,3 +1,15 @@
+<?php 
+    $arrRandomNumbers = [];
+
+    while (count($arrRandomNumbers) < 100) {
+        $newNumber = rand(0,15);
+        if (!in_array($newNumber, $arrRandomNumbers)) {
+            $arrRandomNumbers[] = $newNumber;
+        }; 
+    };
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +20,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container">
+        <h1>Numeri random:</h1>
+        <p> <?php 
+            /*for ($i = 0; $i < count($arrRandomNumbers); $i++) {
+                echo $arrRandomNumbers . ', ';
+            }*/
+            ?>
+            </p>
+    </div>
     
 </body>
 </html>

@@ -1,0 +1,19 @@
+* {
+    margin:0; padding:0; box-sizing: border-box; font-family: 'Roboto';
+}
+
+.container {
+    display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 0 auto; padding: 5rem 1rem;
+}
+
+ul {
+    list-style: none;
+}
+
+.results-div {
+    display: flex; margin: 0 auto; padding: 1rem; gap: 2rem;
+}
+
+.home-team, .host-team {
+    display: flex; flex-direction: column;
+}

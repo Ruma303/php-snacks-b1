@@ -1,8 +1,8 @@
 <?php 
     // Acquisizione dati utente dagli input
-    $name = $_GET['name'];
-    $mail = $_GET['mail'];
-    $age = $_GET['age'];
+    $name = isset($_GET['name']) ? $_GET['name'] : '';
+    $mail = $_GET['mail'] ?? '';
+    $age = $_GET['age'] ??= '';
     
     $nameOK = false;
     //Controllo lunghezza name
@@ -21,6 +21,10 @@
     if ($pos_at && $pos_dot) {
         $mailOK = true;
     };
+
+    // Controllo del tipo age sia numerico
+    $ageOK = false;
+
 ?>
 
 <!DOCTYPE html>
@@ -40,12 +44,12 @@
             <label for="mail">Mail: </label>
             <input type="mail" id='mail' name="mail">
             <label for="age">Età: </label>
-            <input type="number" id='age' name="age">
+            <input type="text" id='age' name="age">
             <button>Invia</button>
         </form>
         <!-- Validazione con if se è tutto ok -->
         <h1><?php
-            if ($nameOK && $mailOK && $age) {
+            if ($nameOK && $mailOK && $ageOK) {
                 echo 'Accesso Riuscito';
             } else {
                 echo 'Accesso Negato';

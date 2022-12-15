@@ -1,8 +1,8 @@
 <?php 
     $arrRandomNumbers = [];
 
-    while (count($arrRandomNumbers) < 100) {
-        $newNumber = rand(0,15);
+    while (count($arrRandomNumbers) <= 16) {
+        $newNumber = rand(0,100);
         if (!in_array($newNumber, $arrRandomNumbers)) {
             $arrRandomNumbers[] = $newNumber;
         }; 
@@ -23,11 +23,9 @@
     <div class="container">
         <h1>Numeri random:</h1>
         <p> <?php 
-            /*for ($i = 0; $i < count($arrRandomNumbers); $i++) {
-                echo $arrRandomNumbers . ', ';
-            }*/
-            ?>
-            </p>
+        for ($i = 0; $i < count($arrRandomNumbers); $i++) {
+           echo $arrRandomNumbers[$i] . ' '; 
+        } ?></p>
     </div>
     
 </body>
